@@ -1,0 +1,198 @@
+:root {
+    /* Gradients */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Primary */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Hanken Grotesk;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 640px;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 20px var(--pale-blue),
+        6px 6px 40px var(--pale-blue);
+    display: flex;
+}
+
+
+.leftCard {
+    width: 50%;
+    text-align: center;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+    color: var(--white);
+    padding: 1rem 2.6rem;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.circle h1,
+.circle p {
+    margin: 0;
+}
+
+.circle h1 {
+    font-size: 3.5rem;
+}
+
+.circle p {
+    font-size: 18px;
+}
+
+.leftCard h3,
+.circle p,
+.leftCard p {
+    opacity: 0.7;
+}
+
+.rightCard {
+    width: 50%;
+    padding: 1rem 2.6rem;
+}
+
+.rightCard>div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rightCard h3{
+    color: var(--dark-gray-blue);
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.miniBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0rem;
+    border-radius: .5rem;
+}
+
+.test{
+    margin-left: 0.5rem;
+}
+
+.result{
+    margin-right: 0.5rem;
+}
+
+.miniBox:nth-child(1) .test{
+    color: var(--light-red);
+}
+
+.miniBox:nth-child(1) {
+    background-color: hsl(0, 80%, 98%);
+}
+
+.miniBox:nth-child(2) .test{
+    color: var(--orangey-yellow); 
+}
+
+.miniBox:nth-child(2){
+    background-color: hsl(39, 80%, 98%);
+}
+
+.miniBox:nth-child(3) .test{
+    color: var(--green-teal);
+}
+
+.miniBox:nth-child(3){
+    background-color: hsl(166, 80%, 97%);
+}
+
+.miniBox:nth-child(4) .test{
+    color: var(--cobalt-blue);
+}
+
+.miniBox:nth-child(4){
+    background-color: hsl(234, 80%, 97%);
+}
+
+.btn{
+    width: 100%;
+}
+
+button{
+    margin: 1.3rem 0rem;
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+}
+
+.result {
+    color: var(--dark-gray-blue);
+    font-weight: bold;
+}
+
+.result span{
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 450px){
+    body{
+        align-items: flex-start;
+    }
+
+    .container{
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .leftCard, .rightCard{
+        width: 100%;
+        padding: auto;
+    }
+
+    .leftCard{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .leftCard>p{
+        margin: 1rem 3rem 2rem 3rem;
+    }
+}
